@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TeaBoom</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+    <!--- CSS --->
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="wrapper-vertical">
+        <main>
+            <section class="section" id="section-modal-call">
+                <div class="wrapper">
+                    <div class="product-card">
+                        <!-- BREADCRUMBS -->
+                        <nav class="product-card__breadcrumbs">
+                            <a href="#">Главная</a>
+                            <a href="#">Каталог чая</a>
+                            <a href="#">Улун</a>
+                            <span>Ананасовый улун</span>
+                        </nav>
+
+                        <!-- LEFT PART - GALLERY -->
+                        <div class="product-card__gallery">
+                            <div class="product-card__main-photo-wrapper" title="Увеличить фото">
+                                <img src="images/1-e4bb1618-fb80-41e2-8758-86f884ce095d.jpg" alt="Ананасовый улун" class="product-card__main-img" id="js-main-img">
+
+                                <button class="product-card__zoom-btn" aria-label="Увеличить фото">
+                                    <svg class="product-card__zoom-icon" viewBox="0 0 512 512">
+                                        <path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0s208 93.1 208 208zM184 296c0 13.3 10.7 24 24 24s24-10.7 24-24V232h64c13.3 0 24-10.7 24-24s-10.7-24-24-24h-64v-64c0-13.3-10.7-24-24-24s-24 10.7-24 24v64h-64c-13.3 0-24 10.7-24 24s10.7 24 24 24h64v64z"
+                                        />
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <!-- SLIDER -->
+                            <div class="product-card__thumbs-slider">
+                                <button class="product-card__slider-arrow product-card__slider-arrow--prev" id="js-thumb-prev" aria-label="Назад" title="Назад"></button>
+
+                                <div class="product-card__thumbs-viewport">
+                                    <div class="product-card__thumbs-tape" id="js-thumbs-tape">
+                                        <img src="images/1-e4bb1618-fb80-41e2-8758-86f884ce095d.jpg" alt="Превью 1" class="product-card__thumb-item is-active" title="Превью 1">
+                                        <img src="images/2-367ac9db-8d54-4879-b2fb-c615b4b8fd44.jpg" alt="Превью 2" class="product-card__thumb-item" title="Превью 2">
+                                        <img src="images/3-f1b43fda-9a53-46c6-a4d6-f01a999a17d1.jpg" alt="Превью 3" class="product-card__thumb-item" title="Превью 3">
+                                        <img src="images/4-fcea826a-4590-4e51-84e0-994ebc0e47da.jpg" alt="Превью 4" class="product-card__thumb-item" title="Превью 4">
+										<img src="images/5-941926bc-a0b7-4af2-8569-5f93709b9c53.jpg" alt="Превью 5" class="product-card__thumb-item" title="Превью 5">
+                                        <img src="images/6-c0df4a47-ba0d-475e-9b18-4aabe030de6b.jpg" alt="Превью 6" class="product-card__thumb-item" title="Превью 6">
+                                        <img src="images/7-ba5b6f88-0336-46eb-a2b4-14d816db75a7.jpg" alt="Превью 7" class="product-card__thumb-item" title="Превью 7">
+                                    </div>
+                                </div>
+
+                                <button class="product-card__slider-arrow product-card__slider-arrow--next" id="js-thumb-next" aria-label="Вперёд" title="Вперёд"></button>
+                            </div>
+                        </div>
+
+
+                        <!-- RIGHT PART - INFO -->
+                        <div class="product-card__content">
+                            <h1 class="product-card__title">Ананасовый улун</h1>
+
+                            <div class="product-card__meta">
+                                <span class="product-card__art-wrap">
+									<span class="product-card__art-wrap-line">Артикул:</span>&nbsp;<span id="js-art">01306</span>
+								</span>
+                            </div>
+
+                            <!-- DESCRIPTION -->
+                            <p class="product-card__short-desc">
+                                Светлый Фуцзяньский улун с&nbsp;ароматом спелого ананаса. В&nbsp;сухом виде&nbsp;&mdash; красивый крупный лист изумрудного цвета, скруткой листа напоминающий Те&nbsp;Гуань Инь.
+                            </p>
+
+                            <div class="product-card__buttons-box">
+                                <!-- REVIEW -->
+                                <a href="#" class="product-card__meta-link">
+                                    <svg class="product-card__icon" viewBox="0 0 24 24">
+                                        <path d="M12 3c5.52 0 10 3.58 10 8s-4.48 8-10 8c-1.12 0-2.2-.15-3.21-.43L4 21v-3.87C2.18 15.79 1 13.51 1 11c0-4.42 4.48-8 10-8z"></path>
+                                    </svg>
+
+                                    <span>Оставить&nbsp;отзыв</span>
+                                </a>
+
+                                <!-- FAV -->
+                                <button class="product-card__fav-btn product-card__fav-btn--tooltip" data-tooltip="Добавить в избранное" aria-label="Добавить в избранное">
+                                    <svg class="product-card__icon" viewBox="0 0 24 24">
+                                        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <!-- SIZES -->
+                            <div class="product-card__sizes">
+                                <span class="product-card__sizes-title">Фасовка:</span>
+                                <div class="product-card__sizes-list">
+
+                                    <label class="product-card__size-item">
+                                        <input type="radio" name="weight" value="100" class="product-card__radio" checked data-art="01306" data-price="326,40&nbsp;&#8381;" data-old="349,20 &#8381;">
+                                        <span class="product-card__btn">100 г</span>
+                                    </label>
+
+                                    <label class="product-card__size-item">
+                                        <input type="radio" name="weight" value="500" class="product-card__radio" data-art="01307" data-price="1&nbsp;432&nbsp;&#8381;" data-old="1&nbsp;646 &#8381;">
+                                        <span class="product-card__btn">500 г</span>
+                                    </label>
+
+                                    <label class="product-card__size-item">
+                                        <input type="radio" name="weight" value="1000" class="product-card__radio" data-art="01308" data-price="2&nbsp;064&nbsp;&#8381;" data-old="2&nbsp;592 &#8381;">
+                                        <span class="product-card__btn">1000 г</span>
+                                    </label>
+
+                                    <label class="product-card__size-item">
+                                        <input type="radio" name="weight" value="5000" class="product-card__radio" data-art="01309" data-price="6&nbsp;320&nbsp;&#8381;" data-old="8&nbsp;710 &#8381;">
+                                        <span class="product-card__btn">5000 г</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- PRICES -->
+                            <div class="product-card__price-box">
+                                <span class="product-card__price-current" id="js-price">326,40&nbsp;&#8381;</span>
+								
+                                <del class="product-card__price-old" id="js-price-old">349,20&nbsp;&#8381;</del>
+                            </div>
+
+                            <!-- CART -->
+                            <button class="product-card__buy-btn" title="Добавить в корзину">
+                                <svg class="product-card__icon" viewBox="0 0 24 24">
+                                    <circle cx="8" cy="21" r="1.5"></circle>
+                                    <circle cx="19" cy="21" r="1.5"></circle>
+                                    <path d="M2 2h3.5l2 11h11.5l2.5-7H6.5"></path>
+                                </svg>
+
+                                <span>В&nbsp;корзину</span>
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="js/main.js"></script>
+</body>
+</html>
