@@ -147,40 +147,44 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (mainImg) {
         mainImg.style.cursor = 'zoom-in';
+		
+		const triggerElements = [mainImg, zoomBtn].filter(Boolean);
 
-        mainImg.addEventListener('click', () => {
-            const modal = document.createElement('div');
-			
-            modal.style.cssText = `
-		  position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-		  background: rgba(0, 0, 0, 0.8); z-index: 1000;
-		  display: flex; align-items: center; justify-content: center;
-		  cursor: zoom-out; opacity: 0; transition: opacity 0.5s;
-		`;
+		 triggerElements.forEach(element => {
+			element.addEventListener('click', () => {
+				const modal = document.createElement('div');
 
-            const bigImg = document.createElement('img');
-            bigImg.src = mainImg.src;
-            bigImg.style.cssText = 'max-width: 90%; max-height: 90%; object-fit: contain; box-shadow: 0 5px 25px rgba(0,0,0,0.5);';
+				modal.style.cssText = `
+			  position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+			  background: rgba(0, 0, 0, 0.8); z-index: 1000;
+			  display: flex; align-items: center; justify-content: center;
+			  cursor: zoom-out; opacity: 0; transition: opacity 0.5s;
+			`;
 
-            modal.appendChild(bigImg);
-            document.body.appendChild(modal);
-            setTimeout(() => modal.style.opacity = '1', 10);
+				const bigImg = document.createElement('img');
+				bigImg.src = mainImg.src;
+				bigImg.style.cssText = 'max-width: 90%; max-height: 90%; object-fit: contain; box-shadow: 0 5px 25px rgba(0,0,0,0.5);';
 
-            // Закрытие по клику в любом месте модального окна
-            modal.addEventListener('click', () => {
-                modal.style.opacity = '0';
-                setTimeout(() => modal.remove(), 300);
-            });
+				modal.appendChild(bigImg);
+				document.body.appendChild(modal);
+				setTimeout(() => modal.style.opacity = '1', 10);
+
+				// Закрытие по клику в любом месте модального окна
+				modal.addEventListener('click', () => {
+					modal.style.opacity = '0';
+					setTimeout(() => modal.remove(), 300);
+				});
 
 
-            // Esc
-            document.addEventListener('keydown', function handleEsc(e) {
-                if (e.key === 'Escape') {
-                    modal.style.opacity = '0';
-                    setTimeout(() => modal.remove(), 300);
-                    document.removeEventListener('keydown', handleEsc);
-				}
-            });
-		});
+				// Esc
+				document.addEventListener('keydown', function handleEsc(e) {
+					if (e.key === 'Escape') {
+						modal.style.opacity = '0';
+						setTimeout(() => modal.remove(), 300);
+						document.removeEventListener('keydown', handleEsc);
+					}
+				});
+			});
+		 });
     }
 });
