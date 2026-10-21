@@ -58,6 +58,8 @@ main {
 	display: flex;
 	flex-direction: column;
 	flex-grow: 1;
+	background-image: url("../images/background/transp_patttern.png");
+	background-attachment: fixed;
 }
 
 .wrapper {
